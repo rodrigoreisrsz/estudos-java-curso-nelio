@@ -24,7 +24,6 @@ public class Teste {
             sc.nextLine();
 
             switch (tipoPessoa) {
-
                 case PESSOA_FISICA:
                     System.out.println("Teve gastos com saude: (S/N0)");
                     String resposta = sc.nextLine();
