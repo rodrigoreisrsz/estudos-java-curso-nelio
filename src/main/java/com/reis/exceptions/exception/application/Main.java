@@ -1,6 +1,6 @@
-package com.reis.exceptions.muchbadsolution.application;
+package com.reis.exceptions.exception.application;
 
-import com.reis.exceptions.muchbadsolution.model.entities.Reservation;
+import com.reis.exceptions.exception.model.entities.Reservation;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -32,14 +32,11 @@ public class Main {
             System.out.print("Check-Out date (date/MM/yyyy)");
             checkOut = sdf.parse(sc.next());
 
-            Date now = new Date();
-            if(checkIn.before(now) || checkOut.before(now)){
-                System.out.println("Error in reservation: Reservation dates for update must be future");
-            }else  if(!checkOut.after(checkIn)){
-                System.out.println("Error in reservation: Check-out date must be after check-in date");
 
+            String error = reservation.updateDates(checkIn, checkOut);
+            if(error != null){
+                System.out.println("Error in reservatio "+ error);
             }else{
-                reservation.updateDates(checkIn, checkOut);
                 System.out.println("Reservation :" + reservation);
             }
 
