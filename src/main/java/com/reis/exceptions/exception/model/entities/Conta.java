@@ -21,18 +21,15 @@ public class Conta {
         if(valor <=0){
             throw new DepositoInvalidoException("Não é possivel depositar um valor nulo.");
         }
-        try{
-            saldo += valor;
-            System.out.println("Novo saldo: " + saldo);
-        }
-        catch(DepositoInvalidoException e){
-            e.getMessage();
-        }
+        saldo += valor;
+        System.out.println("Novo saldo: " + saldo);
+
+
 
     }
     public void saque(double valor){
         if(valor > saldo){
-            throw new SaldoInsuficienteException("Erro: Saldo insuficiente! ");
+            throw new SaldoInsuficienteException("Saldo insuficiente! ");
         }
         if(valor > limite){
             throw new LimiteAtringidoException("Limite de saque atingido!");
