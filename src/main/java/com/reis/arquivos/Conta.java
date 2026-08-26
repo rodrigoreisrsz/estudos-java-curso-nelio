@@ -19,7 +19,7 @@ public class Conta {
     }
     public void registrar(){
         String path = "C:\\Users\\User\\Desktop\\file.txt";
-        String text = "Saldo atualizado:  "+ saldo;
+        String text = "Saldo atualizado:  "+ saldo + " Dono: " + dono;
 
         try(BufferedWriter bw = new BufferedWriter(new FileWriter(path, true))){
             bw.write(text);
