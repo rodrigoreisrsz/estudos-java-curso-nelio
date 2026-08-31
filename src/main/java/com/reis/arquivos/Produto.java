@@ -27,6 +27,7 @@ public class Produto {
         try(BufferedWriter bw = new BufferedWriter(new FileWriter(path, true))){
             bw.write(nome + ","+precoUnitario + ","+quantidade);
             bw.newLine();
+
         }catch(IOException e){
             System.out.println("Erro: " +  e.getMessage());
         }
@@ -34,6 +35,7 @@ public class Produto {
     public void registrarSummaryCSV(){
         Path pasta = Paths.get( "C:\\Users\\User\\Downloads\\out");
         Path arquivo = pasta.resolve( "summary.csv");
+
         try{
             Files.createDirectories(pasta);
             try(BufferedWriter bw = new BufferedWriter(new FileWriter(arquivo.toFile(), true));){

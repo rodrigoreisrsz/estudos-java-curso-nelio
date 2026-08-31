@@ -8,6 +8,7 @@ public class Main {
     public static void main(String[] args) {
         File file = new File("C:\\Users\\User\\Desktop\\file.txt");
         Scanner sc = null;
+        System.out.println(file.lastModified());
         try{
             sc = new Scanner(file);
             while(sc.hasNextLine()){
