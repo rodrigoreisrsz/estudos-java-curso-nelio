@@ -12,7 +12,7 @@ public class Conta {
     }
     public double deposito(double valor){
         return saldo += valor;
-        //registrar();
+
     }
     public double sacar(double valor){
         return saldo -= valor;

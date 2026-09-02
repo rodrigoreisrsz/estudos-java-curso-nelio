@@ -10,8 +10,9 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+        Funcionario funcionario = new Funcionario("ray", 20000);
         List<String> list = new ArrayList<>();
-        String path = "C:\\Users\\User\\Downloads\\in.txt.txt";
+        String path = "C:\\Users\\rodri\\Downloads\\in.txt.txt"; //"C:\\Users\\User\\Downloads\\in.txt";
 
         try(BufferedReader br = new BufferedReader(new FileReader(path))){
             String name = br.readLine();
@@ -28,5 +29,10 @@ public class Main {
             System.out.println("Err0: " + e.getMessage());
 
         }
+        funcionario.listarFuncionarios();
     }
+
+
 }
+
+
