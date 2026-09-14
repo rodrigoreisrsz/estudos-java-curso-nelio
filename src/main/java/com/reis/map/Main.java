@@ -15,6 +15,7 @@ public class Main {
 
         cookies.remove("numero");
 
+
         System.out.println("Contains 'email' key: " + cookies.containsKey("email"));
         System.out.println("zap number: " + cookies.get("zap"));
 

@@ -3,10 +3,12 @@ package com.reis.map.exercicio;
 public class Produtos {
     private String nome;
     private double preco;
+    private int codigo;
 
     public Produtos(String nome, double preco) {
         this.nome = nome;
         this.preco = preco;
+        //this.codigo = codigo;
     }
 
     public String getNome() {
@@ -15,6 +17,12 @@ public class Produtos {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+    public int getCodigo(){
+        return codigo;
+    }
+    public void setCodigo(int codigo){
+        this.codigo = codigo;
     }
 
     public double getPreco() {

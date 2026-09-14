@@ -12,7 +12,7 @@ public class Produtos {
     private int id;
     private double preco;
 
-    static List<Produtos> produtos = new ArrayList<>();
+    public static List<Produtos> produtos = new ArrayList<>();
     static Scanner sc = new Scanner(System.in);
 
     public Produtos(){
@@ -25,15 +25,24 @@ public class Produtos {
         this.preco = preco;
     }
     public static Produtos adicionarProduto(){
-        System.out.println("Digite o nome do produto");
-        String nomeProduto = sc.nextLine();
-        System.out.println("Digite o ID do produto");
-        int id = sc.nextInt();
-        System.out.println("Digite o preço");
-        double preco = sc.nextDouble();
-        Produtos produto = new Produtos(nomeProduto, id, preco);
-        produtos.add(produto);
-        return produto;
+
+        System.out.println("Quantidade de produtos");
+        int quantidade = sc.nextInt();
+        for(int i =0; i<= quantidade; i++){
+            System.out.println("Digite o nome do produto");
+            String nomeProduto = sc.nextLine();
+            sc.nextLine();
+            System.out.println("Digite o ID do produto");
+            int id = sc.nextInt();
+            System.out.println("Digite o preço");
+            double preco = sc.nextDouble();
+            Produtos produto = new Produtos(nomeProduto, id, preco);
+            produtos.add(produto);
+            return produto;
+
+        }
+
+        return null;
     }
 
     public static void listarProdutos(){

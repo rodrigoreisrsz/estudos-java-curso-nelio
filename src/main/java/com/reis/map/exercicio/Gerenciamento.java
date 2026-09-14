@@ -2,10 +2,7 @@ package com.reis.map.exercicio;
 
 
 
-import java.util.HashSet;
-
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 
 public class Gerenciamento {
     public static void main(String[] args) {
@@ -20,9 +17,20 @@ public class Gerenciamento {
             String nome = sc.nextLine();
             System.out.println("Preço do produto:");
             double preco = sc.nextDouble();
+
+            System.out.println("Codigo do produto: ");
+            int codigo = sc.nextInt();
+
             Produtos produto = new Produtos(nome, preco);
             estoque.add(produto);
+
+            Map<Produtos, Integer> codigos = new HashMap<>();
+            codigos.put(produto, codigo);
+
+            System.out.println(codigos.get(codigo));
+
         }
+
 
 
     }
