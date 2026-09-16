@@ -8,6 +8,6 @@ public class Main {
         List<String> nomes = new ArrayList<>();
 
         nomes.add("Rodrigo");
-        //nomes.add(8); -> compilador nao permite pois ele sabe que a List espera valores em String
+        //nomes.add(8); → compilador nao permite pois ele sabe que a List espera valores em *String*
     }
 }
